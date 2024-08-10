@@ -14,7 +14,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect('mongodb+srv://al-hadef:oIF0f9zOqrkwj0sE@al-hadef.4yog0.mongodb.net/receiptdb', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -32,6 +32,6 @@ app.use('/api', routes);
 
 // Start the server
 const port = process.env.PORT || 5000;
-app.listen(port, () => {
+app.listen(3000, () => {
   console.log(`Server running on port ${port}`);
 });
